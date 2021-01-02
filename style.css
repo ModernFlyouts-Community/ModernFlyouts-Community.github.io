@@ -1,7 +1,11 @@
+:root {
+    --page-background: #eee;
+    --hero-elevation: 0px 0px 30px 1px rgba(0,0,0,0.25);
+}
+
 html, body {
-    height: 90%;
-    height: 90vh;
-    background-color: #eee;
+    height: 100%;
+    background-color: var(--page-background);
 }
 
 h1 {
@@ -26,16 +30,16 @@ h1 {
     margin: 0 50px;
 }
 
-#container img {
+#hero img {
     max-width: 100%;
     height: auto;
 }
 
 #hero {
-    box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.25);
+    box-shadow: var(--hero-elevation);
 }
 
 .badge {
     display: inline-block;
-    width: calc(284px * 0.50);
+    width: 142px;
 }
