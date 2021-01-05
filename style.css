@@ -1,48 +1,85 @@
-:root {
-    --page-background: #eee;
-    --text-color: #000;
-    --hero-elevation: 0px 0px 30px 1px rgba(0,0,0,0.25);
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-html, body {
-    height: 100%;
-    background-color: var(--page-background);
-    color: var(--text-color);
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: linear-gradient(#0F5095 0%, #0371CA 50%, #2FB9EE 100%);
 }
 
-h1 {
-    font-weight: 600;
-    font-size: 4rem;
-    margin-left: -.075em; /* HACK: Remove left side bearing */
+::-webkit-scrollbar-track {
+    background-color: #23272a;
 }
 
-#container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
+body {
+    background-color: #23272a;
+    color: #ffffff;
 }
 
-#container a {
-    text-decoration: none;
+p.title {
+    text-align: center;
+    color: #A6E9F4;
+    font-family: "Segoe UI";
+    font-size: xx-large;
 }
 
-#container .item {
-    margin: 0 50px;
+img.logo {
+    display: block;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 1%;
+    width: 20%;
+    border-radius: 10px;
 }
 
-#hero img {
-    border-radius: 5px;
-    max-width: 100%;
-    height: auto;
+img.first {
+    display: block;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    border-radius: 10px;
+    transition: 0.7s;
+    box-shadow: 0px 0px 5px #000000;
 }
 
-#hero {
-    box-shadow: var(--hero-elevation);
+img.first:hover {
+    box-shadow: 0px 0px 10px #000000;
 }
 
-.badge {
-    display: inline-block;
-    width: 142px;
+button {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0F5095 0%, #0371CA 50%, #2FB9EE 100%);
+    background-size: 200% auto;
+    transition: 0.7s;
+    padding: 2%;
+    box-shadow: 0px 0px 5px #000000;
+    color: #A6E9F4;
+    font-family: "Segoe UI";
+    font-size: medium;
+}
+
+button:hover {
+    background-position: right;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+button:active, button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+button.b1 {
+    margin-left: 10%;
+    margin-bottom: 10%;
+    float: left;
+}
+
+button.b2 {
+    margin-right: 10%;
+    margin-bottom: 10%;
+    float: right;
 }
