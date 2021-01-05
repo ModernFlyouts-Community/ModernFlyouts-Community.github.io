@@ -480,6 +480,7 @@ input.slider::-moz-range-thumb {
 	border-radius: 50%;
     appearance: none;
 	-webkit-appearance: none;
+    overflow: hidden;
 }
 
 input.slider:hover::-webkit-slider-thumb,
