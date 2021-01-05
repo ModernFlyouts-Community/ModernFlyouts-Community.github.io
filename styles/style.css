@@ -113,7 +113,7 @@ button:not(:disabled) {
 	min-height: 180px;
 	margin-bottom: 0.75%;
 	margin-right: 0.75%;
-	border-radius: 8px;
+	border-radius: 1.5vh;
 	border: 1px solid rgba(var(--primary-color-invert), 1);
 }
 
@@ -126,6 +126,7 @@ button:not(:disabled) {
 .backdrop .backdrop-image {
 	background: url('../assets/backdrop.jpg') center/cover no-repeat;
     filter: blur(25px);
+    transform: scale(1.1);
 }
 
 
