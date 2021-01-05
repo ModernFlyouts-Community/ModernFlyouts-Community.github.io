@@ -1,24 +1,3 @@
-/* Animations */
-
-@keyframes fade {
-    0% {
-        opacity:0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes flyout {
-    0% {
-        transform:translateY(-5px);
-
-    }
-    100% {
-        transform: none;
-    }
-}
-
 /* Containers */
 
 @font-face {
@@ -233,7 +212,6 @@ a:hover {
 .hero #preview {
 	margin-right: 72px;
 	max-width: 100%;
-    perspective: 30px;
 }
 
 .flyout {
@@ -248,8 +226,7 @@ a:hover {
 	border-radius: 8px;
 	-webkit-box-shadow: 0 2.74416px 2.74416px rgba(0, 0, 0, .0274351), 0 5.48831px 5.48831px rgba(0, 0, 0, .0400741), 0 13.7208px 10.9766px rgba(0, 0, 0, .0499982), 0 20.5812px 20.5812px rgba(0, 0, 0, .0596004), 0 41.1623px 41.1623px rgba(0, 0, 0, .0709366), 0 96.0454px 89.1851px rgba(0, 0, 0, .09);
 	        box-shadow: 0 2.74416px 2.74416px rgba(0, 0, 0, .0274351), 0 5.48831px 5.48831px rgba(0, 0, 0, .0400741), 0 13.7208px 10.9766px rgba(0, 0, 0, .0499982), 0 20.5812px 20.5812px rgba(0, 0, 0, .0596004), 0 41.1623px 41.1623px rgba(0, 0, 0, .0709366), 0 96.0454px 89.1851px rgba(0, 0, 0, .09);
-	overflow: hidden;
-    transition: transform 0.5s;
+    transform-style: preserve-3d;
 }
 
 .flyout .flyout-main {
@@ -260,6 +237,11 @@ a:hover {
 	    -ms-flex-align: center;
 	        align-items: center;
 	height: 50px;
+    transition: 150ms linear transform;
+}
+
+.flyout:hover .flyout-main {
+    transform:translateZ(10px);
 }
 
 .flyout .mute-button {
@@ -323,6 +305,11 @@ a:hover {
 .flyout-media {
 	padding: 16px;
 	display: block;
+    transition: 100ms linear transform;
+}
+
+.flyout:hover .flyout-media {
+    transform:translateZ(10px);
 }
 
 .media-info {
