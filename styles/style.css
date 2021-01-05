@@ -237,11 +237,11 @@ a:hover {
 	    -ms-flex-align: center;
 	        align-items: center;
 	height: 50px;
-    transition: 150ms linear transform;
+    transition: 250ms linear transform;
 }
 
 .flyout:hover .flyout-main {
-    transform:translateZ(10px);
+    transform:translateZ(15px);
 }
 
 .flyout .mute-button {
@@ -305,11 +305,11 @@ a:hover {
 .flyout-media {
 	padding: 16px;
 	display: block;
-    transition: 100ms linear transform;
+    transition: 250ms linear transform;
 }
 
 .flyout:hover .flyout-media {
-    transform:translateZ(10px);
+    transform:translateZ(15px);
 }
 
 .media-info {
