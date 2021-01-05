@@ -451,8 +451,14 @@ a:hover {
 
 /* Sliders */
 
-
-/* Also stolen from my components */
+/*
+ * For some reason unknown to me,
+ * the slider thumb selector refuses
+ * to apply when combining the class.
+ * As a workaround for the time being,
+ * i've split the same styling into
+ * two selectors.
+ */
 
 input.slider {
     background-color: transparent;
@@ -470,11 +476,9 @@ input.slider {
 	--slider-secondary-opacity: .4;
 }
 
-input.slider::-webkit-slider-thumb,
-input.slider::-moz-range-thumb {
-	background-color: rgb(var(--accent-color));
+input.slider::-webkit-slider-thumb {
+	background-color: rgba(var(--accent-color), 1);
     border: none;
-	border-radius: 0;
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
@@ -483,11 +487,16 @@ input.slider::-moz-range-thumb {
     overflow: hidden;
 }
 
-input.slider:hover::-webkit-slider-thumb,
-input.slide:hoverr::-moz-range-thumb {
-	--slider-secondary-opacity: .2;
-	-webkit-box-shadow: inset 0 0 0 18px rgba(255, 255, 255, var(--slider-secondary-opacity));
-	        box-shadow: inset 0 0 0 18px rgba(255, 255, 255, var(--slider-secondary-opacity));
+
+input.slider::-moz-range-thumb {
+    background-color: rgba(var(--accent-color), 1);
+    border: none;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+    appearance: none;
+	-webkit-appearance: none;
+    overflow: hidden;
 }
 
 input.slider:hover {
@@ -500,13 +509,24 @@ input.slider:hover::-webkit-slider-thumb {
 	        box-shadow: inset 0 0 0 18px rgba(255, 255, 255, var(--slider-secondary-opacity));
 }
 
-input.slider:active {
-	--slider-secondary-opacity: .6;
+input.slider:hover::-moz-range-thumb {
+    --slider-secondary-opacity: .2;
+	-webkit-box-shadow: inset 0 0 0 18px rgba(255, 255, 255, var(--slider-secondary-opacity));
+	        box-shadow: inset 0 0 0 18px rgba(255, 255, 255, var(--slider-secondary-opacity));
 }
 
-input.slider:active::-webkit-slider-thumb,
-input.slider:active::-moz-range-thumb {
+input.slider:active {
+	--slider-secondary-opacity: .4;
+}
+
+input.slider:active::-webkit-slider-thumb {
 	--slider-secondary-opacity: .2;
+	-webkit-box-shadow: inset 0 0 0 18px rgba(0, 0, 0, var(--slider-secondary-opacity));
+	        box-shadow: inset 0 0 0 18px rgba(0, 0, 0, var(--slider-secondary-opacity));
+}
+
+input.slider:active::-moz-range-thumb {
+    --slider-secondary-opacity: .2;
 	-webkit-box-shadow: inset 0 0 0 18px rgba(0, 0, 0, var(--slider-secondary-opacity));
 	        box-shadow: inset 0 0 0 18px rgba(0, 0, 0, var(--slider-secondary-opacity));
 }
