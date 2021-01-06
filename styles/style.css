@@ -339,6 +339,10 @@ a:hover {
 .media-info {
     display: block;
     position: relative;
+    min-width: 0;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
 }
 
 .media-info h5 {
@@ -358,6 +362,10 @@ a:hover {
     font-size: 13px;
     font-weight: 400;
     color: rgba(var(--primary-color-invert), 1);
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .media-inner .media-thumbnail {
