@@ -115,6 +115,7 @@ button:not(:disabled) {
 	margin-right: 0.75%;
 	border-radius: 1.5vh;
 	border: 1px solid rgba(var(--primary-color-invert), 1);
+    opacity: 0.05;
 }
 
 .backdrop .acrylic-material {
@@ -496,15 +497,6 @@ a:hover {
 
 
 /* Sliders */
-
-/*
- * For some reason unknown to me,
- * the slider thumb selector refuses
- * to apply when combining the class.
- * As a workaround for the time being,
- * i've split the same styling into
- * two selectors.
- */
 
 .slider {
     display: flex;
