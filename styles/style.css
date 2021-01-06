@@ -190,7 +190,7 @@ h6 {
 	margin: 0;
 }
 
-h1 {
+#details h1 {
 	line-height: normal;
 	font-weight: 700;
 	font-size: 4rem;
@@ -198,7 +198,7 @@ h1 {
 	/* HACK: Remove left side bearing */
 }
 
-p {
+#details p {
 	color: rgba(var(--primary-color-invert), 0.75);
 }
 
@@ -241,9 +241,9 @@ a:hover {
 	    -ms-flex-align: center;
 	        align-items: center;
 	height: 50px;
-    -webkit-transition: 250ms linear transform;
-    -o-transition: 250ms linear transform;
-    transition: 250ms linear transform;
+    -webkit-transition: 250ms ease transform;
+    -o-transition: 250ms ease transform;
+    transition: 250ms ease transform;
 }
 
 .flyout:hover .flyout-main {
@@ -310,11 +310,12 @@ a:hover {
 /* Flyout Media */
 
 .flyout-media {
+    border-radius: 8px;
 	padding: 16px;
 	display: block;
-    -webkit-transition: 250ms linear transform;
-    -o-transition: 250ms linear transform;
-    transition: 250ms linear transform;
+    -webkit-transition: 250ms ease transform;
+    -o-transition: 250ms ease transform;
+    transition: 250ms ease transform;
 }
 
 .flyout:hover .flyout-media {
@@ -322,7 +323,7 @@ a:hover {
             transform:translateZ(15px);
 }
 
-.media-info {
+.media-inner {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -332,6 +333,11 @@ a:hover {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+}
+
+.media-info {
+    display: block;
+    position: relative;
 }
 
 .media-info h5 {
@@ -346,7 +352,14 @@ a:hover {
 	   text-overflow: ellipsis;
 }
 
-.media-info .media-thumbnail {
+.media-info p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(var(--primary-color-invert), 1);
+}
+
+.media-inner .media-thumbnail {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
