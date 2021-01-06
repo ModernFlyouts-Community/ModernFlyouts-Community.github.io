@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const slider = document.querySelector('.flyout input[type="range" i].slider');
 
     // Set volume
-    slider.value = '50';
+    slider.value = '50'; // Hack to prevent firefox from caching slider values
     setVolume();
     slider.addEventListener('input', event => {
         slider.style.backgroundImage = `linear-gradient(to right, #0078d7 0%, rgb(var(--accent-color)) ${slider.value}%, rgba(var(--primary-color-invert), var(--slider-secondary-opacity)) ${slider.value}%, rgba(var(--primary-color-invert), var(--slider-secondary-opacity)) 100%)`;
