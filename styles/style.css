@@ -233,6 +233,7 @@ a:hover {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     transition: 150ms ease transform;
+    backface-visibility: hidden;
 }
 
 .flyout .flyout-main {
@@ -246,6 +247,7 @@ a:hover {
     -webkit-transition: 250ms ease transform;
     -o-transition: 250ms ease transform;
     transition: 250ms ease transform;
+    backface-visibility: hidden;
 }
 
 .flyout:hover .flyout-main {
@@ -318,6 +320,7 @@ a:hover {
     -webkit-transition: 250ms ease transform;
     -o-transition: 250ms ease transform;
     transition: 250ms ease transform;
+    backface-visibility: hidden;
 }
 
 .flyout:hover .flyout-media {
