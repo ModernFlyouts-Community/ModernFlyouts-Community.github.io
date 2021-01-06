@@ -17,8 +17,9 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="styles/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="styles/style.css">
-  <script type="text/javascript" src="scripts/script.js"></script>
   <script defer type="text/javascript" src="scripts/vanilla-tilt.min.js"></script>
+  <script defer type="text/javascript" src="scripts/range-slider.min.js"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
 
   <title>ModernFlyouts</title>
 </head>
@@ -40,7 +41,7 @@
                     <button class="mute-button">
                         <span class="mdl2-icon"></span>
                     </button>
-                    <input class="slider" type="range"></input>
+                    <input type="range" class="slider" min="0" max="100" value="0 ">
                     <div class="volume">00</div>
                 </div>
                 <div class="flyout-media">
@@ -90,5 +91,4 @@
         </aside>
     </main>
 </body>
-
 </html>

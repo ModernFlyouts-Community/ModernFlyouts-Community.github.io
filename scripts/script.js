@@ -24,13 +24,12 @@ function toggleTheme() {
 // Wait until elements are loaded
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    const slider = document.querySelector('.flyout input[type="range" i].slider');
+    const sliderInputComponent = document.querySelector('.flyout input[type="range" i]');
 
     // Set volume
-    slider.value = '50'; // Hack to prevent firefox from caching slider values
+    sliderInputComponent.value = '50'; // Hack to prevent firefox from caching slider values
     setVolume();
-    slider.addEventListener('input', event => {
-        slider.style.backgroundImage = `linear-gradient(to right, #0078d7 0%, rgb(var(--accent-color)) ${slider.value}%, rgba(var(--primary-color-invert), var(--slider-secondary-opacity)) ${slider.value}%, rgba(var(--primary-color-invert), var(--slider-secondary-opacity)) 100%)`;
+    sliderInputComponent.addEventListener('input', event => {
         setVolume();
     });
 
@@ -51,4 +50,39 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // console.log('User Agent has reported NT 10.0. Switching to protocol link.');
         document.getElementById('store-link').setAttribute('href', 'ms-windows-store://pdp/?ProductId=9mt60qv066rp');
     }
+
+    // Slider
+    // http://stryzhevskyi.github.io/rangeSlider/
+    // Initialize a new plugin instance for one element or NodeList of elements.
+    const slider = document.querySelector('input[type="range"].slider');
+    rangeSlider.create(slider, {
+        polyfill: true,     // Boolean, if true, custom markup will be created
+        root: document,
+        rangeClass: 'slider',
+        disabledClass: 'disabled',
+        fillClass: 'slider-fill',
+        bufferClass: 'slider-track',
+        handleClass: 'slider-thumb',
+        startEvent: ['mousedown', 'touchstart', 'pointerdown'],
+        moveEvent: ['mousemove', 'touchmove',   'pointermove'],
+        endEvent: ['mouseup', 'touchend', 'pointerup'],
+        vertical: false,    // Boolean, if true slider will be displayed in vertical orientation
+        min: null,          // Number, 0
+        max: null,          // Number, 100
+        step: null,         // Number, 1
+        value: 0,        // Number, center of slider
+        buffer: null,       // Number, in percent, 0 by default
+        stick: null,        // [Number stickTo, Number stickRadius] : use it if handle should stick to ${stickTo}-th value in ${stickRadius}
+        borderRadius: 10,   // Number, if you're using buffer + border-radius in css
+    });
+
+    // update position
+    const triggerEvents = true; // or false
+    slider.rangeSlider.update({
+        min : 0,
+        max : 100,
+        step : 1,
+        value : 0,
+        buffer : 100
+    }, triggerEvents);
 });
