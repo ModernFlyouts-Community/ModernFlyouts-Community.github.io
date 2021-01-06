@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const sliderInputComponent = document.querySelector('.flyout input[type="range" i]');
 
     // Set volume
-    sliderInputComponent.value = '50'; // Hack to prevent firefox from caching slider values
     setVolume();
     sliderInputComponent.addEventListener('input', event => {
         setVolume();
@@ -82,7 +81,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         min : 0,
         max : 100,
         step : 1,
-        value : 0,
+        value : 20,
         buffer : 100
     }, triggerEvents);
 });
