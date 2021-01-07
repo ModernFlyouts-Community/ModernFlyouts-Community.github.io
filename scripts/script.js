@@ -13,11 +13,8 @@ function setVolume() {
 
 function toggleTheme() {
     // console.log('Theme toggled.');
-    const flyout = document.querySelector('.flyout');
     document.body.classList.toggle('theme-light');
     document.body.classList.toggle('theme-dark');
-    flyout.classList.toggle('theme-light');
-    flyout.classList.toggle('theme-dark');
     document.getElementById('toggle-theme').classList.toggle('selected');
 }
 
