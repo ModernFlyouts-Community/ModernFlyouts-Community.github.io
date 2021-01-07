@@ -476,6 +476,11 @@ a:hover {
 	background-color: rgba(var(--primary-color-invert), 0.35);
 }
 
+.media-controls .controls-inner {
+    top: 6px;
+    position: relative;
+}
+
 .media-controls .controls-inner button {
 	width: 40px;
 	height: 40px;
