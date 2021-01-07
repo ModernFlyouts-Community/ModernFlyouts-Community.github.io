@@ -209,6 +209,7 @@ a:hover {
 	text-decoration: none;
 	-webkit-user-drag: none;
     cursor: default;
+    outline: none;
 }
 
 
@@ -266,12 +267,21 @@ a:hover {
 	font-weight: 500;
 }
 
-.flyout .mute-button:hover {
-	background-color: rgba(var(--primary-color-invert), 0.09);
+.flyout .mute-button:hover:not(:active) {
+	background-color: rgba(var(--primary-color-invert), 0.29);
+    box-shadow: inset 0 0 0 1px rgba(var(--primary-color-invert), 0.29);
+}
+
+.theme-light .flyout .mute-button:hover:not(:active) {
+    background-color: rgba(var(--primary-color-invert), 0.15);
 }
 
 .flyout .mute-button:active {
 	background-color: rgba(var(--primary-color-invert), 0.26);
+}
+
+.theme-light .flyout .mute-button:active {
+    background-color: rgba(var(--primary-color-invert), 0.14);
 }
 
 .flyout .mute-button:focus {
@@ -434,8 +444,12 @@ a:hover {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	border-radius: 2px;
-	font-size: 14px;
 	font-weight: 500;
+}
+
+.media-controls #toggle-theme svg {
+    width: 12px;
+    height: 12px;
 }
 
 .media-controls #toggle-theme.selected {
@@ -477,22 +491,25 @@ a:hover {
 	border-radius: 50px;
 	outline: none;
 	border: none;
-	background-color: rgba(var(--primary-color-invert), 0.18);
 	color: rgba(var(--primary-color-invert), 1);
 	font-weight: 500;
 	font-size: 16px;
-}
-
-.media-controls .controls-inner button:hover {
-	background-color: rgba(var(--primary-color-invert), 0.09);
-}
-
-.media-controls .controls-inner button:active {
-	background-color: rgba(var(--primary-color-invert), 0.35);
+    background-color: transparent;
 }
 
 .media-controls .controls-inner button:nth-child(2) {
 	margin: 0 40px;
+    background-color: rgba(var(--primary-color-invert), 0.17);    
+}
+
+.media-controls .controls-inner button:hover {
+	background-color: rgba(var(--primary-color-invert), 0.23);
+    border: 1px solid rgba(var(--primary-color-invert), 0.33);
+}
+
+.media-controls .controls-inner button:active {
+	background-color: rgba(var(--primary-color-invert), 0.27);
+    border: none;
 }
 
 
@@ -592,7 +609,7 @@ a:hover {
 	-webkit-transition: 100ms linear background-color, 100ms linear color, 100ms linear box-shadow, 100ms linear transform;
 	-o-transition: 100ms linear background-color, 100ms linear color, 100ms linear box-shadow, 100ms linear transform;
 	transition: 100ms linear background-color, 100ms linear color, 100ms linear box-shadow, 100ms linear transform;
-	--button-color: rgba(var(--primary-color-invert), 0.2);
+	--button-color: rgba(var(--primary-color-invert), 0.18);
 	border: 1px solid transparent;
 }
 
@@ -639,13 +656,13 @@ a:hover {
 }
 
 .button.reveal:hover {
-	border: 1px solid rgba(var(--primary-color-invert), 0.5);
-	--button-color: rgba(var(--primary-color-invert), 0.3);
+	border: 1px solid rgba(var(--primary-color-invert), 0.49);
+	--button-color: rgba(var(--primary-color-invert), 0.26);
 }
 
 .button.reveal:active {
 	border: 1px solid transparent;
-	--button-color: rgba(var(--primary-color-invert), 0.3);
+	--button-color: rgba(var(--primary-color-invert), 0.27);
 }
 
 
