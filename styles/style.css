@@ -251,7 +251,7 @@ a:hover {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	height: 50px;
+	height: 48px;
     -webkit-transition: 250ms ease transform;
     -o-transition: 250ms ease transform;
     transition: 250ms ease transform;
@@ -270,7 +270,7 @@ a:hover {
 	background-color: transparent;
 	color: rgba(var(--primary-color-invert), 1);
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .flyout .mute-button:hover {
@@ -305,7 +305,7 @@ a:hover {
 .flyout .volume,
 .flyout .mute-button {
 	height: 100%;
-	width: 50px;
+	width: 48px;
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
@@ -322,8 +322,8 @@ a:hover {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	color: rgba(var(--primary-color-invert), 1);
-	font-size: 22px;
-	font-weight: 350;
+	font-size: 20px;
+	font-weight: 400;
 	line-height: normal;
 }
 
@@ -370,7 +370,7 @@ a:hover {
 	color: rgba(var(--primary-color-invert), 1);
 	font-size: 14px;
 	line-height: normal;
-	font-weight: 500;
+	font-weight: 600;
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -434,7 +434,7 @@ a:hover {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 36px;
+	width: 33px;
 	height: 28px;
 	padding: 0;
 	background-color: rgba(var(--primary-color-invert), 0.18);
@@ -455,8 +455,8 @@ a:hover {
 }
 
 .media-controls #toggle-theme svg {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
 }
 
 .media-controls #toggle-theme.selected {
@@ -564,8 +564,8 @@ a:hover {
 
 .slider .slider-thumb {
     position: absolute;
-    height: 19px;
-	width: 19px;
+    height: 20px;
+	width: 20px;
     border: none;
 	border-radius: 50%;
     background-color: rgba(var(--accent-color), 1);
@@ -628,8 +628,8 @@ a:hover {
 	display: flex;
 	border-radius: 3px;
 	font-size: 14px;
-	padding: 6px 12px;
-	font-weight: 400;
+	padding: 5px 10px;
+	font-weight: normal;
 	background-color: var(--button-color);
 	color: rgb(var(--primary-text-color));
 	-webkit-transition: 100ms linear background-color, 100ms linear color, 100ms linear box-shadow, 100ms linear transform;
