@@ -757,3 +757,9 @@ html.darkmode .media-controls .controls-inner button:active {
 		height: auto;
 	}
 }
+
+@media (prefers-reduced-motion) {
+	* {
+		transition: none !important;
+	}
+}

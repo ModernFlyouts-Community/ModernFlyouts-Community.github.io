@@ -22,8 +22,8 @@ function toggleTheme() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // Set and watch system-prefered theme (based on snippet from https://www.abitofaccess.com/toggle-dark-mode-by-user-preference)
-    let preference_query = window.matchMedia('(prefers-color-scheme: dark)');
-    function checkPreference(query) {
+    let colorScheme_query = window.matchMedia('(prefers-color-scheme: dark)');
+    function getPrefersColorScheme(query) {
         if (query.matches) {
             // A dark color scheme preference is set so we add the class from our html element
             document.documentElement.classList.add('darkmode');
@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             isDarkmode = false;
         }
     }
-    checkPreference(preference_query);
-    preference_query.addListener(checkPreference);
+    getPrefersColorScheme(colorScheme_query);
+    colorScheme_query.addListener(getPrefersColorScheme);
 
     const sliderInputComponent = document.querySelector('.flyout input[type="range" i]');
 
