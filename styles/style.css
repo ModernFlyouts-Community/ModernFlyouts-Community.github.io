@@ -65,8 +65,14 @@ button:not(:disabled) {
 
 #details {
 	max-width: 600px;
+	/* HACK: negate heading text top margin */
+	font-size: 4rem;
+	margin-top: -0.6ch;
 }
 
+#details > * {
+	font-size: initial;
+}
 
 /* Page Backdrop */
 
@@ -688,7 +694,7 @@ a:hover {
 
 /* Mobile Support */
 
-@media screen and (max-width: 965px) {
+@media screen and (max-width: 1000px) {
 	#details h1 {
 		font-size: 2.75rem;
 	}
@@ -729,7 +735,7 @@ a:hover {
 	}
 }
 
-@media screen and (max-height: 500px) and (max-width: 965px) {
+@media screen and (max-height: 500px) and (max-width: 1000px) {
 	.hero {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
