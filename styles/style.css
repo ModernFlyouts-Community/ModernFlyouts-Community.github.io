@@ -12,7 +12,7 @@
 	--accent-color: 0, 120, 215;
 }
 
-.theme-light {
+html {
 	--page-background: #faf9f8;
 	--primary-color: 255, 255, 255;
 	--primary-color-invert: 0, 0, 0;
@@ -20,7 +20,7 @@
 	--flyout-background: #efefef;
 }
 
-.theme-dark {
+html.darkmode {
 	--page-background: #11100f;
 	--primary-color: 0, 0, 0;
 	--primary-color: 0, 0, 0;
@@ -156,16 +156,16 @@ button:not(:disabled) {
 	opacity: .8;
 }
 
-.theme-dark .acrylic-material::before {
-	background: -o-linear-gradient(bottom, rgba(45, 45, 45, 0.2), rgba(45, 45, 45, 0.2)), rgba(45, 45, 45, .95) url('../assets/noise.png') center/196px repeat;
-	background: -webkit-gradient(linear, left bottom, left top, from(rgba(45, 45, 45, 0.2)), to(rgba(45, 45, 45, 0.2))), rgba(45, 45, 45, .95) url('../assets/noise.png') center/196px repeat;
-	background: linear-gradient(0deg, rgba(45, 45, 45, 0.2), rgba(45, 45, 45, 0.2)), rgba(45, 45, 45, .95) url('../assets/noise.png') center/196px repeat;
-}
-
-.theme-light .acrylic-material::before {
+html .acrylic-material::before {
 	background: -o-linear-gradient(bottom, rgba(239, 239, 239, 0.3), rgba(239, 239, 239, 0.3)), rgba(239, 239, 239, 0.95) url('../assets/noise.png') center/196px repeat;
 	background: -webkit-gradient(linear, left bottom, left top, from(rgba(239, 239, 239, 0.3)), to(rgba(239, 239, 239, 0.3))), rgba(239, 239, 239, 0.95) url('../assets/noise.png') center/196px repeat;
 	background: linear-gradient(0deg, rgba(239, 239, 239, 0.3), rgba(239, 239, 239, 0.3)), rgba(239, 239, 239, 0.95) url('../assets/noise.png') center/196px repeat;
+}
+
+html.darkmode .acrylic-material::before {
+	background: -o-linear-gradient(bottom, rgba(45, 45, 45, 0.2), rgba(45, 45, 45, 0.2)), rgba(45, 45, 45, .95) url('../assets/noise.png') center/196px repeat;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(45, 45, 45, 0.2)), to(rgba(45, 45, 45, 0.2))), rgba(45, 45, 45, .95) url('../assets/noise.png') center/196px repeat;
+	background: linear-gradient(0deg, rgba(45, 45, 45, 0.2), rgba(45, 45, 45, 0.2)), rgba(45, 45, 45, .95) url('../assets/noise.png') center/196px repeat;
 }
 
 
@@ -273,25 +273,25 @@ a:hover {
 	font-weight: 400;
 }
 
-.flyout .mute-button:hover {
+html.darkmode .flyout .mute-button:hover {
 	background-color: rgba(var(--primary-color-invert), 0.29);
     border: 1px solid rgba(var(--primary-color-invert), 0.29);
 }
 
-.theme-light .flyout .mute-button:hover:not(:active) {
+.flyout .mute-button:hover:not(:active) {
     background-color: rgba(var(--primary-color-invert), 0.15);
 }
 
-.flyout .mute-button:active {
+html.darkmode .flyout .mute-button:active {
 	background-color: rgba(var(--primary-color-invert), 0.32);
     border: none;
 }
 
-.theme-light .flyout .mute-button:active {
+.flyout .mute-button:active {
     background-color: rgba(var(--primary-color-invert), 0.1);
 }
 
-.flyout .mute-button:focus {
+html.darkmode .flyout .mute-button:focus {
 	outline: none;
 }
 
@@ -509,31 +509,31 @@ a:hover {
     background-color: transparent;
 }
 
-.media-controls .controls-inner button:nth-child(2) {
+html.darkmode .media-controls .controls-inner button:nth-child(2) {
 	margin: 0 40px;
     background-color: rgba(var(--primary-color-invert), 0.19);    
 }
 
-.theme-light .media-controls .controls-inner button:nth-child(2) {
+.media-controls .controls-inner button:nth-child(2) {
     background-color: rgba(var(--primary-color-invert), 0.18);    
 }
 
-.media-controls .controls-inner button:hover {
+html.darkmode .media-controls .controls-inner button:hover {
 	background-color: rgba(var(--primary-color-invert), 0.268);
     box-shadow: inset 0 0 0 1px rgba(var(--primary-color-invert), 0.3);
 }
 
-.theme-light .media-controls .controls-inner button:hover {
+.media-controls .controls-inner button:hover {
 	background-color: rgba(var(--primary-color-invert), 0.155);
     box-shadow: inset 0 0 0 1px rgba(var(--primary-color-invert), 0.33);
 }
 
-.media-controls .controls-inner button:active {
+html.darkmode .media-controls .controls-inner button:active {
 	background-color: rgba(var(--primary-color-invert), 0.31);
     box-shadow: none;
 }
 
-.theme-light .media-controls .controls-inner button:active {
+.media-controls .controls-inner button:active {
 	background-color: rgba(var(--primary-color-invert), 0.14);
     box-shadow: none;
 }
@@ -755,5 +755,11 @@ a:hover {
 		    -ms-flex-pack: center;
 		        justify-content: center;
 		height: auto;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	* {
+		transition: none !important;
 	}
 }

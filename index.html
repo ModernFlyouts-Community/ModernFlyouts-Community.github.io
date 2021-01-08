@@ -18,7 +18,16 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="styles/style.css">
-  <script defer type="text/javascript" src="scripts/vanilla-tilt.min.js"></script>
+  <script>
+    // Check for preferes-reduced-motion
+    const reducedMotion_query = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function getPrefersReducedMotion(query) {
+      if (!query.matches) {
+        document.write('<script defer type="text/javascript" src="scripts/vanilla-tilt.min.js"></' + 'script>');
+      }
+    }
+    getPrefersReducedMotion(reducedMotion_query);
+  </script>
   <script defer type="text/javascript" src="scripts/range-slider.min.js"></script>
   <script type="text/javascript" src="scripts/script.js"></script>
 

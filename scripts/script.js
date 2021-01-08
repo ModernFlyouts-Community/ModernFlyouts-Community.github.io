@@ -11,16 +11,34 @@ function setVolume() {
 
 // Toggle theme
 
+let isDarkmode;
 function toggleTheme() {
-    // console.log('Theme toggled.');
-    document.body.classList.toggle('theme-light');
-    document.body.classList.toggle('theme-dark');
+    document.documentElement.classList.toggle('darkmode');
     document.getElementById('toggle-theme').classList.toggle('selected');
+    isDarkmode = !isDarkmode;
 }
 
 // Wait until elements are loaded
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    // Set and watch system-prefered theme (based on snippet from https://www.abitofaccess.com/toggle-dark-mode-by-user-preference)
+    let colorScheme_query = window.matchMedia('(prefers-color-scheme: dark)');
+    function getPrefersColorScheme(query) {
+        if (query.matches) {
+            // A dark color scheme preference is set so we add the class from our html element
+            document.documentElement.classList.add('darkmode');
+            document.getElementById('toggle-theme').classList.add('selected');
+            isDarkmode = true;
+        } else {
+            // No dark color scheme preference is set so we remove the class from our html element
+            document.documentElement.classList.remove('darkmode');
+            document.getElementById('toggle-theme').classList.remove('selected');
+            isDarkmode = false;
+        }
+    }
+    getPrefersColorScheme(colorScheme_query);
+    colorScheme_query.addListener(getPrefersColorScheme);
+
     const sliderInputComponent = document.querySelector('.flyout input[type="range" i]');
 
     // Set volume
