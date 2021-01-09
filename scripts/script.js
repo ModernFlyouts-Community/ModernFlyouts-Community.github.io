@@ -79,6 +79,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('store-link').setAttribute('href', 'ms-windows-store://pdp/?ProductId=9mt60qv066rp');
     }
 
+    // Detect mobile safari (cringe)
+    if (window.navigator.userAgent.match(/iPad/i) || window.navigator.userAgent.match(/iPhone/i)) {
+        let style = document.createElement('style');
+        style.innerText = 
+       `.acrylic-material::before { opacity: 0.2; }
+        html .acrylic-material::before { background: #fff; }
+        html.darkmode .acrylic-material::before { background: #000; }`.replace(/\n/g, ' ');
+        document.getElementsByTagName("head")[0].appendChild(style);
+    }
+
     // Slider
     // http://stryzhevskyi.github.io/rangeSlider/
     // Initialize a new plugin instance for one element or NodeList of elements.
