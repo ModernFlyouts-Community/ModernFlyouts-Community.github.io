@@ -1,3 +1,13 @@
+// SVGS
+
+const moon_svg = `<svg xmlns="http://www.w3.org/2000/svg" width="33.063" height="35.982" viewBox="0 0 33.063 35.982">
+<path id="Moon" d="M37.9,33.009a18.007,18.007,0,0,1-30.41,1.221,1.35,1.35,0,0,1,.657-2.036c6.78-2.427,10.412-5.239,12.519-9.261C22.887,18.7,23.46,14.058,21.908,7.7a1.35,1.35,0,0,1,1.384-1.668A18.006,18.006,0,0,1,37.9,33.009Zm-15.02-8.917c-2.3,4.4-6.112,7.431-12.426,9.907a15.5,15.5,0,1,0,14.7-25.231l-.469-.08C25.882,14.655,25.28,19.516,22.883,24.092Z" transform="translate(-7.254 -6.03)" fill="currentColor"/>
+</svg>`
+
+const sun_svg = `<svg xmlns="http://www.w3.org/2000/svg" width="39.962" height="40.005" viewBox="0 0 39.962 40.005">
+<path id="Sun" d="M23.993,38.465a1.25,1.25,0,0,1,1.243,1.122l.007.128v3.037a1.25,1.25,0,0,1-2.493.128l-.007-.128V39.715A1.25,1.25,0,0,1,23.993,38.465ZM35.9,34.1l.1.091,2.148,2.148A1.25,1.25,0,0,1,36.478,38.2l-.1-.091-2.148-2.148A1.25,1.25,0,0,1,35.9,34.1Zm-22.14.091a1.25,1.25,0,0,1,.091,1.666l-.091.1L11.608,38.1a1.25,1.25,0,0,1-1.859-1.666l.091-.1,2.148-2.148A1.25,1.25,0,0,1,13.755,34.189ZM24,13.081A10.919,10.919,0,1,1,13.081,24,10.919,10.919,0,0,1,24,13.081Zm0,2.5A8.419,8.419,0,1,0,32.42,24,8.419,8.419,0,0,0,24,15.581Zm18.731,7.207a1.25,1.25,0,0,1,.128,2.493l-.128.007H39.694a1.25,1.25,0,0,1-.128-2.494l.128-.006ZM8.307,22.729a1.25,1.25,0,0,1,.128,2.493l-.128.007H5.27a1.25,1.25,0,0,1-.128-2.494l.128-.006ZM11.506,9.8l.1.091,2.148,2.148A1.25,1.25,0,0,1,12.089,13.9l-.1-.091L9.84,11.663A1.25,1.25,0,0,1,11.506,9.8ZM38.145,9.9a1.25,1.25,0,0,1,.091,1.666l-.091.1L36,13.811a1.25,1.25,0,0,1-1.859-1.666l.091-.1L36.377,9.9A1.25,1.25,0,0,1,38.145,9.9ZM24,4A1.25,1.25,0,0,1,25.244,5.12l.006.128V8.285a1.25,1.25,0,0,1-2.493.128l-.007-.128V5.248A1.25,1.25,0,0,1,24,4Z" transform="translate(-4.02 -3.998)" fill="currentColor"/>
+</svg>`
+
 // Set volume counter
 
 function setVolume() {
@@ -14,7 +24,11 @@ function setVolume() {
 let isDarkmode;
 function toggleTheme() {
     document.documentElement.classList.toggle('darkmode');
-    document.getElementById('toggle-theme').classList.toggle('selected');
+    if (isDarkmode)
+        document.getElementById('toggle-theme').innerHTML = sun_svg;
+    else
+        document.getElementById('toggle-theme').innerHTML = moon_svg;
+
     isDarkmode = !isDarkmode;
 }
 
@@ -27,12 +41,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (query.matches) {
             // A dark color scheme preference is set so we add the class from our html element
             document.documentElement.classList.add('darkmode');
-            document.getElementById('toggle-theme').classList.add('selected');
+            document.getElementById('toggle-theme').innerHTML = moon_svg;
             isDarkmode = true;
         } else {
             // No dark color scheme preference is set so we remove the class from our html element
             document.documentElement.classList.remove('darkmode');
-            document.getElementById('toggle-theme').classList.remove('selected');
+            document.getElementById('toggle-theme').innerHTML = sun_svg;
             isDarkmode = false;
         }
     }

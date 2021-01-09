@@ -224,6 +224,7 @@ a:hover {
 .hero #preview {
 	margin-right: 72px;
 	max-width: 100%;
+	z-index: 10;
 }
 
 .flyout {
@@ -457,22 +458,6 @@ html.darkmode .flyout .mute-button:focus {
 .media-controls #toggle-theme svg {
     width: 14px;
     height: 14px;
-}
-
-.media-controls #toggle-theme.selected {
-	background-color: rgba(var(--accent-color), 0.5);
-}
-
-.media-controls #toggle-theme.selected:hover {
-	background-color: rgba(var(--accent-color), 0.5);
-	-webkit-box-shadow: inset 0 0 0 100vmax rgba(var(--primary-color-invert), 0.09);
-	        box-shadow: inset 0 0 0 100vmax rgba(var(--primary-color-invert), 0.09);
-}
-
-.media-controls #toggle-theme.selected:active {
-	background-color: rgba(var(--accent-color), 0.5);
-	-webkit-box-shadow: inset 0 0 0 100vmax rgba(var(--primary-color-invert), 0.35);
-	        box-shadow: inset 0 0 0 100vmax rgba(var(--primary-color-invert), 0.35);
 }
 
 .media-controls #toggle-theme:hover {
@@ -712,6 +697,8 @@ html.darkmode .media-controls .controls-inner button:active {
 	}
 	.hero #preview {
 		margin: 0;
+		align-self: center;
+		-webkit-align-self: center;
 	}
 	#details {
 		margin-top: 24px;
