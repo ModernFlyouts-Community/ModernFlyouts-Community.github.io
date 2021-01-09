@@ -224,6 +224,7 @@ a:hover {
 .hero #preview {
 	margin-right: 72px;
 	max-width: 100%;
+	z-index: 10;
 }
 
 .flyout {
@@ -712,6 +713,8 @@ html.darkmode .media-controls .controls-inner button:active {
 	}
 	.hero #preview {
 		margin: 0;
+		align-self: center;
+		-webkit-align-self: center;
 	}
 	#details {
 		margin-top: 24px;
