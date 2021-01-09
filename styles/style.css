@@ -510,11 +510,11 @@ html.darkmode .flyout .mute-button:focus {
 }
 
 html.darkmode .media-controls .controls-inner button:nth-child(2) {
-	margin: 0 40px;
     background-color: rgba(var(--primary-color-invert), 0.19);    
 }
 
 .media-controls .controls-inner button:nth-child(2) {
+	margin: 0 40px;
     background-color: rgba(var(--primary-color-invert), 0.18);    
 }
 
