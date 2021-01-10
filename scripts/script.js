@@ -13,9 +13,13 @@ const sun_svg = `<svg xmlns="http://www.w3.org/2000/svg" width="39.962" height="
 function setVolume() {
     const slider = document.querySelector('.flyout input[type="range" i].slider');
     document.querySelector('.flyout .volume').innerHTML = slider.value;
-    if (slider.value.length == 1) {
+    if (slider.value.length === 1) {
         document.querySelector('.flyout .volume').innerHTML = `0${slider.value}`;
     }
+    if (slider.value === '0')
+        document.querySelector('.mdl2-icon').innerText = ''; // muted
+    else
+        document.querySelector('.mdl2-icon').innerText = ''; // playing
     // console.log(`Volume is now set to ${slider.value}.`);
 }
 
