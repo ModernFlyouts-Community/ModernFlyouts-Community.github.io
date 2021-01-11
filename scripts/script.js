@@ -13,13 +13,18 @@ const sun_svg = `<svg xmlns="http://www.w3.org/2000/svg" width="39.962" height="
 function setVolume() {
     const slider = document.querySelector('.flyout input[type="range" i].slider');
     document.querySelector('.flyout .volume').innerHTML = slider.value;
+    // add a leading zero for single-digit numbers
     if (slider.value.length === 1) {
         document.querySelector('.flyout .volume').innerHTML = `0${slider.value}`;
     }
-    if (slider.value === '0')
+    // if the volume is 0 change the icon to muted speaker
+    if (slider.value === '0') {
         document.querySelector('.mdl2-icon').innerText = ''; // muted
-    else
+    }
+    // else, return the icon to normal speaker
+    else {
         document.querySelector('.mdl2-icon').innerText = ''; // playing
+    }
     // console.log(`Volume is now set to ${slider.value}.`);
 }
 
@@ -60,8 +65,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const sliderInputComponent = document.querySelector('.flyout input[type="range" i]');
 
     // Set volume
+    let isMuted = false;
+    
     setVolume();
     sliderInputComponent.addEventListener('input', event => {
+        isMuted = false;
+        setVolume();
+    });
+
+    // Mute when speaker is clicked
+    let previousValue = 0;
+    const speakerButton = document.getElementsByClassName('mute-button')[0];
+    speakerButton.addEventListener('click', event => {
+        if (isMuted) {
+            slider.value = previousValue;
+            previousValue = 0;
+        }
+        else {
+            previousValue = slider.value;
+            slider.value = 0;
+        }
+        isMuted = !isMuted;
         setVolume();
     });
 
