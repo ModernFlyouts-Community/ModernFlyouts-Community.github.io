@@ -1,6 +1,7 @@
 # ModernFlyouts-Community.github.io
 
-![preview](https://i.imgur.com/B2tywt1.png)
+![preview](https://i.imgur.com/utvINK2.png)
+![preview](https://i.imgur.com/oPG5V2Z.png)
 
 This repository contains the source code for our GitHub Pages site. It is a simple static site which uses vanilla JS.
 
