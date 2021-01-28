@@ -228,6 +228,7 @@ a:hover {
 }
 
 .flyout {
+	margin-bottom: 10px;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
@@ -397,20 +398,9 @@ html.darkmode .flyout .mute-button:focus {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
 	width: 64px;
 	height: 64px;
-	margin-left: 16px;
 	border-radius: 10px;
-	background-color: rgba(var(--primary-color-invert), .07);
-	color: rgba(var(--primary-color-invert), 1);
-	font-size: 36px;
-	font-weight: 500;
 }
 
 .media-controls {
@@ -749,4 +739,17 @@ html.darkmode .media-controls .controls-inner button:active {
 	* {
 		transition: none !important;
 	}
+}
+
+.player {
+	height: auto;
+	line-height: 16px;
+	margin-bottom: 4px;
+}
+
+img.spotify {
+	float: left;
+	height: 16px;
+	margin-right: 4px;
+	width: 16px;
 }
