@@ -740,3 +740,16 @@ html.darkmode .media-controls .controls-inner button:active {
 		transition: none !important;
 	}
 }
+
+.player {
+	height: auto;
+	line-height: 16px;
+	margin-bottom: 4px;
+}
+
+img.spotify {
+	float: left;
+	height: 16px;
+	margin-right: 4px;
+	width: 16px;
+}
