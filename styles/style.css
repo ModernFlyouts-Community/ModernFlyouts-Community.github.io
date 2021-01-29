@@ -368,6 +368,24 @@ html.darkmode .flyout .mute-button:focus {
 	        flex: 1 1 auto;
 }
 
+.media-application {
+    display: flex;
+    align-items: center;
+	line-height: 16px;
+	margin-bottom: 4px;
+}
+
+.media-application img {
+    width: 16px;
+	height: 16px;
+	margin-right: 6px;
+}
+
+.media-application span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
 .media-info h5 {
 	color: rgba(var(--primary-color-invert), 1);
 	font-size: 14px;
@@ -739,17 +757,4 @@ html.darkmode .media-controls .controls-inner button:active {
 	* {
 		transition: none !important;
 	}
-}
-
-.player {
-	height: auto;
-	line-height: 16px;
-	margin-bottom: 4px;
-}
-
-img.spotify {
-	float: left;
-	height: 16px;
-	margin-right: 4px;
-	width: 16px;
 }
