@@ -293,7 +293,7 @@ html.darkmode .flyout .mute-button:active {
     background-color: rgba(var(--primary-color-invert), 0.1);
 }
 
-html.darkmode .flyout .mute-button:focus {
+html.darkmode .flyout .mute-button {
 	outline: none;
 }
 
