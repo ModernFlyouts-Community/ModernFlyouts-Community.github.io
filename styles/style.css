@@ -302,6 +302,7 @@ html.darkmode .flyout .mute-button {
 	    -ms-flex: 1 1 auto;
 	        flex: 1 1 auto;
 	margin: 0 10px;
+	cursor: w-resize;
 }
 
 .flyout .volume,
@@ -311,6 +312,7 @@ html.darkmode .flyout .mute-button {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 auto;
 	        flex: 0 0 auto;
+	cursor: pointer;
 }
 
 .flyout .volume {
@@ -461,6 +463,7 @@ html.darkmode .flyout .mute-button {
 	        justify-content: center;
 	border-radius: 2px;
 	font-weight: 500;
+	cursor: pointer;
 }
 
 .media-controls #toggle-theme svg {
@@ -500,6 +503,7 @@ html.darkmode .flyout .mute-button {
 	font-weight: 500;
 	font-size: 16px;
     background-color: transparent;
+	cursor: pointer;
 }
 
 html.darkmode .media-controls .controls-inner button:nth-child(2) {
@@ -603,6 +607,7 @@ html.darkmode .media-controls .controls-inner button:active {
 .button-container .button {
 	margin-top: 6px;
 	margin-right: 6px;
+	cursor: pointer;
 }
 
 .button:focus {
@@ -683,6 +688,38 @@ html.darkmode .media-controls .controls-inner button:active {
 	border: 1px solid transparent;
 	--button-color: rgba(var(--primary-color-invert), 0.27);
 }
+
+/* Github Corner */
+.github-corner{
+	cursor: pointer  !important;
+}
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms infinite ease-in-out;
+}
+@keyframes octocat-wave {
+	0%,
+	100% {
+	  transform: rotate(0);
+	}
+	20%,
+	60% {
+	  transform: rotate(-25deg);
+	}
+	40%,
+	80% {
+	  transform: rotate(10deg);
+	}
+}
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+	  animation: none;
+	}
+	.github-corner .octo-arm {
+	  animation: octocat-wave 560ms ease-in-out;
+	}
+  }
+  
+/* Github Corner */
 
 
 /* Mobile Support */
