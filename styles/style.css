@@ -302,7 +302,7 @@ html.darkmode .flyout .mute-button {
 	    -ms-flex: 1 1 auto;
 	        flex: 1 1 auto;
 	margin: 0 10px;
-	cursor: all-scroll;
+	cursor: w-resize;
 }
 
 .flyout .volume,
