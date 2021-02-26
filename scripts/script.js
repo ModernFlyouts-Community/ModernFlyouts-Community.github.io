@@ -39,6 +39,8 @@ function toggleTheme() {
         document.getElementById('toggle-theme').innerHTML = moon_svg;
 
     isDarkmode = !isDarkmode;
+    // Save user preference into localstorage
+    localStorage.setItem('isDarkmode', isDarkmode);
 }
 
 // Wait until elements are loaded
@@ -61,6 +63,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     getPrefersColorScheme(colorScheme_query);
     colorScheme_query.addListener(getPrefersColorScheme);
+    
+    if(localStorage.getItem("isDarkmode") !== null){
+        if(JSON.parse(localStorage.getItem('isDarkmode'))){
+            isDarkmode = true;
+            document.documentElement.classList.add('darkmode');
+            document.getElementById('toggle-theme').innerHTML = moon_svg;
+        }else{
+            isDarkmode = false;
+            document.documentElement.classList.remove('darkmode');
+            document.getElementById('toggle-theme').innerHTML = sun_svg;
+        }
+    }
 
     const sliderInputComponent = document.querySelector('.flyout input[type="range" i]');
 
