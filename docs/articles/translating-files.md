@@ -1,6 +1,6 @@
-# Translating Files
+# Translating ModernFlyouts
 
-#### The first step is to create a fork of the Files repository where you can make changes.
+#### The first step is to create a fork of the ModernFlyouts repository where you can make changes.
 ### Software requirements
 - Visual Studio 2017 or newer (optional)
 - [Multilingual App Toolkit Extension](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308) (optional)
@@ -14,11 +14,11 @@
 - Click on "Multilingual App Toolkit" > "Add translation languages..."
 - There may be a dialog that says, "Translation provider manager issue", you can just click "OK" to ignore it.
 - Select the language you want to translate by ticking the ✅ in front of that language.
-- The resource file that you will translate can be found under `Files(Universal Windows)\MultilingualResources\Files.[language_code].xlf`
+- The resource file that you will translate can be found under `ModernFlyouts\MultilingualResources\ModernFlyouts.[language_code].xlf`
 
 ### Editing a resource file with the Multilingual App Toolkit Editor
 - Navigate to the project folder
-- The XLF File should be located at `Files\Files\MultilingualResources\Files.[language_code].xlf`
+- The XLF File should be located at `ModernFlyouts\ModernFlyouts\MultilingualResources\Files.[language_code].xlf`
 - Open the file with the "Multilingual App Toolkit Editor"
 
 ### Working with resource files
