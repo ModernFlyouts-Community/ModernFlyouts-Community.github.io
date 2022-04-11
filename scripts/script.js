@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Detect userAgent NT version and use protocol instead
     if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) {
         // console.log('User Agent has reported NT 10.0. Switching to protocol link.');
-        document.getElementById('store-link').setAttribute('href', 'ms-windows-store://pdp/?ProductId=9mt60qv066rp');
+        document.getElementById('store-link').setAttribute('href', 'ms-windows-store://pdp/?ProductId=9mt60qv066rp&mode=mini');
     }
 
     // Detect mobile safari (cringe)
